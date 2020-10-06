@@ -11,7 +11,7 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import com.example.kotlin.MainActivity
 import com.example.kotlin.R
-import com.example.kotlin.model.ToDoData
+import com.example.kotlin.data.models.ToDoData
 
 class NotificationHelper(val context: Context,val toDoData: ToDoData,val message:String){
     private val CHANNEL_ID = "TodoList Channel Id"
@@ -37,14 +37,11 @@ class NotificationHelper(val context: Context,val toDoData: ToDoData,val message
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         }
         val pendingIntent = PendingIntent.getActivity(context,0,intent,0)
-        val icon = BitmapFactory.decodeResource(context.resources, R.drawable.ic_baseline_leak_add_24)
 
         val notification = NotificationCompat.Builder(context,CHANNEL_ID)
             .setSmallIcon(R.drawable.ic_baseline_leak_add_24)
-            .setLargeIcon(icon)
-            .setContentTitle("Todo:")
+            .setContentTitle(context.applicationContext.packageName)
             .setContentText("${message}: ${toDoData.title}")
-            .setStyle(NotificationCompat.BigPictureStyle().bigLargeIcon(icon).bigLargeIcon(null))
             .setContentIntent(pendingIntent)
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .setAutoCancel(true)

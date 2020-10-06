@@ -1,9 +1,8 @@
-package com.example.kotlin.model
+package com.example.kotlin.data.models
 
 import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.example.kotlin.model.Priority
 import kotlinx.android.parcel.Parcelize
 
 @Entity(tableName = "todo_table")

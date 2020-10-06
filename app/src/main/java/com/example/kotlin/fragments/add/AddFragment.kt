@@ -1,17 +1,14 @@
 package com.example.kotlin.fragments.add
 
 import android.os.Bundle
-import android.text.TextUtils
 import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModel
 import androidx.navigation.fragment.findNavController
 import com.example.kotlin.R
 import com.example.kotlin.fragments.SharedViewModel
-import com.example.kotlin.model.Priority
-import com.example.kotlin.model.ToDoData
+import com.example.kotlin.data.models.ToDoData
 import com.example.kotlin.utils.NotificationHelper
 import com.example.kotlin.viewmodel.ToDoViewModel
 import kotlinx.android.synthetic.main.fragment_add.*

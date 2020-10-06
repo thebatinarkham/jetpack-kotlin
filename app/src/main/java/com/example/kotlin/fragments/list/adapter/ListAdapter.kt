@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlin.databinding.RowLayoutBinding
-import com.example.kotlin.model.ToDoData
+import com.example.kotlin.data.models.ToDoData
 
 class ListAdapter : RecyclerView.Adapter<ListAdapter.ViewHolder>() {
 
@@ -14,7 +14,7 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.ViewHolder>() {
 
     class ViewHolder(private val binding:RowLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(toDoData: ToDoData){
-            binding.todoData = toDoData
+            binding.toDoData = toDoData
             binding.executePendingBindings()
         }
 

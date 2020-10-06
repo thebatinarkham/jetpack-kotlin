@@ -1,8 +1,7 @@
 package com.example.kotlin.fragments.list.adapter
 
 import androidx.recyclerview.widget.DiffUtil
-import com.example.kotlin.model.ToDoData
-import kotlin.math.sign
+import com.example.kotlin.data.models.ToDoData
 
 class ToDoDiffUtil (
     private val oldList: List<ToDoData>,

@@ -1,7 +1,7 @@
 package com.example.kotlin.data
 
 import androidx.room.TypeConverter
-import com.example.kotlin.model.Priority
+import com.example.kotlin.data.models.Priority
 
 class Converter {
     @TypeConverter

@@ -1,7 +1,6 @@
 package com.example.kotlin.fragments
 
 import android.app.Application
-import android.text.TextUtils
 import android.view.View
 import android.widget.AdapterView
 import android.widget.TextView
@@ -9,8 +8,8 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import com.example.kotlin.R
-import com.example.kotlin.model.Priority
-import com.example.kotlin.model.ToDoData
+import com.example.kotlin.data.models.Priority
+import com.example.kotlin.data.models.ToDoData
 
 class SharedViewModel(application: Application):AndroidViewModel(application){
 
